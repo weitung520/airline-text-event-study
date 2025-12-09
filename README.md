@@ -1,2 +1,22 @@
-# airline-text-event-study
-Social media comments from Taiwanese airlines were used for text classification and sentiment analysis to further analyze whether service incidents have a significant impact on abnormal compensation.
+# airline-text-event-study 
+專案類型： 畢業論文
+專案概述：使用了台灣航空公司的社群媒體評論來進行文本分類與情緒分析，進一步分析服務事件是否對於異常報酬有顯著的影響
+
+# 流程
+
+* 資料收集與前處理
+  * 顧客評論
+
+    擷取評論文本、日期和評分等資訊
+    將所有評論翻譯成英文，並使用 NLTK (自然語言工具包) 依據標點符號將文本斷句、斷詞，並執行詞幹提取 (stemming)
+  * 公司財務指標
+
+    收集台灣證券交易所 (TWSE) 的每日收盤價資料。
+    收集 TAIEX（加權股價指數） 作為市場基準。
+    收集公司規模（員工人數）、負債比率 (LEV)、流動比率、每股盈餘 (EPS) 等財務控制變數
+
+* BERT訓練集準備、微調
+* BERT 文本分類與情緒分析
+* 服務事件識別
+* 異常報酬計算
+* 迴歸分析
